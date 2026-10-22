@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RafaToto - Mahjong Virtual</title>
+  <meta name="description" content="RafaToto Mahjong Virtual — halaman simulasi ubin untuk hiburan.">
+  <style>
+    :root {
+      --bg: #101827;
+      --panel: #1b2940;
+      --panel2: #233550;
+      --gold: #f5c65d;
+      --text: #f4f7fb;
+      --muted: #b7c3d5;
+      --green: #5dd39e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 24px 14px;
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #263c5b 0, var(--bg) 58%);
+    }
+    .container { width: min(760px, 100%); margin: 0 auto; }
+    header { text-align: center; margin: 8px 0 24px; }
+    .logo { font-size: clamp(30px, 7vw, 46px); font-weight: 900; letter-spacing: 1px; color: var(--gold); }
+    .subtitle { color: var(--muted); margin-top: 6px; }
+    .panel {
+      background: rgba(27, 41, 64, .96);
+      border: 1px solid rgba(245, 198, 93, .28);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 14px 36px rgba(0,0,0,.22);
+    }
+    h2 { margin: 0 0 8px; font-size: 20px; }
+    .help { margin: 0 0 18px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .tiles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 9px; margin: 20px 0; }
+    .tile {
+      min-height: 74px; display: grid; place-items: center;
+      background: linear-gradient(145deg, #fff9e9, #e8d7ad);
+      color: #263247; border-radius: 12px; border: 2px solid #d5b76e;
+      font-size: clamp(24px, 6vw, 36px); font-weight: 800;
+      box-shadow: 0 4px 0 #b2944e; user-select: none;
+    }
+    .tile.selected { outline: 3px solid var(--green); transform: translateY(-2px); }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    button {
+      border: 0; border-radius: 12px; padding: 13px 18px;
+      font: inherit; font-weight: 800; cursor: pointer;
+    }
+    #putar { background: var(--gold); color: #182235; flex: 1; }
+    #reset { background: var(--panel2); color: var(--text); }
+    button:focus-visible { outline: 3px solid white; outline-offset: 3px; }
+    #hasil { min-height: 28px; margin: 18px 0 0; font-weight: 700; color: var(--green); text-align: center; }
+    .notice { margin-top: 16px; color: var(--muted); font-size: 12px; line-height: 1.5; text-align: center; }
+    footer { text-align: center; color: var(--muted); font-size: 12px; margin: 20px 0 0; }
+    @media (max-width: 420px) {
+      .panel { padding: 15px; }
+      .tiles { gap: 6px; }
+      .tile { min-height: 62px; border-radius: 9px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="logo">RAFA TOTO</div>
+      <div class="subtitle">Mahjong Virtual · Simulasi ubin untuk hiburan</div>
+    </header>
+
+    <section class="panel" aria-labelledby="judul">
+      <h2 id="judul">Meja Mahjong Virtual</h2>
+      <p class="help">Tekan ubin untuk memilihnya. Tombol PUTAR akan mengacak tampilan ubin secara acak untuk simulasi saja.</p>
+
+      <div class="tiles" id="tiles" aria-label="Ubin Mahjong virtual">
+        <button class="tile" type="button" aria-label="Ubin 1">🀇</button>
+        <button class="tile" type="button" aria-label="Ubin 2">🀈</button>
+        <button class="tile" type="button" aria-label="Ubin 3">🀉</button>
+        <button class="tile" type="button" aria-label="Ubin 4">🀊</button>
+        <button class="tile" type="button" aria-label="Ubin 5">🀋</button>
+        <button class="tile" type="button" aria-label="Ubin 6">🀌</button>
+        <button class="tile" type="button" aria-label="Ubin 7">🀍</button>
+        <button class="tile" type="button" aria-label="Ubin 8">🀎</button>
+        <button class="tile" type="button" aria-label="Ubin 9">🀏</button>
+        <button class="tile" type="button" aria-label="Ubin 10">🀀</button>
+      </div>
+
+      <div class="actions">
+        <button id="putar" type="button">🎲 PUTAR</button>
+        <button id="reset" type="button">Atur Ulang</button>
+      </div>
+      <p id="hasil" role="status" aria-live="polite">Pilih ubin atau tekan PUTAR untuk memulai.</p>
+      <p class="notice">Catatan: Ini hanya simulasi acak untuk hiburan. Hasil tidak memprediksi hasil permainan atau menjamin keuntungan.</p>
+    </section>
+
+    <footer>© <span id="tahun"></span> RafaToto · Mahjong Virtual</footer>
+  </main>
+
+  <script>
+    const simbol = ["🀇","🀈","🀉","🀊","🀋","🀌","🀍","🀎","🀏","🀐","🀑","🀒","🀀","🀁","🀂","🀃","🀄"];
+    const tiles = Array.from(document.querySelectorAll(".tile"));
+    const hasil = document.getElementById("hasil");
+
+    tiles.forEach((tile) => {
+      tile.addEventListener("click", () => {
+        tile.classList.toggle("selected");
+        hasil.textContent = tile.classList.contains("selected")
+          ? "Ubin dipilih: " + tile.textContent
+          : "Pilihan ubin dibatalkan.";
+      });
+    });
+
+    document.getElementById("putar").addEventListener("click", () => {
+      tiles.forEach((tile) => {
+        tile.textContent = simbol[Math.floor(Math.random() * simbol.length)];
+        tile.classList.remove("selected");
+      });
+      hasil.textContent = "Simulasi selesai — ubin diacak secara acak.";
+    });
+
+    document.getElementById("reset").addEventListener("click", () => {
+      const awal = ["🀇","🀈","🀉","🀊","🀋","🀌","🀍","🀎","🀏","🀀"];
+      tiles.forEach((tile, i) => {
+        tile.textContent = awal[i];
+        tile.classList.remove("selected");
+      });
+      hasil.textContent = "Tampilan diatur ulang.";
+    });
+
+    document.getElementById("tahun").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
