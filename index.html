@@ -1,1 +1,1022 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  
+<!-- Google Analytics Toko Rafa -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RFZZJPC41Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RFZZJPC41Z');
+</script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".produk-card a, .produk-card button").forEach(function (elemen) {
+
+    elemen.addEventListener("click", function () {
+      const kartu = elemen.closest(".produk-card");
+      const judul = kartu ? kartu.querySelector("h3, h2") : null;
+      const namaProduk = judul ? judul.textContent.trim() : "Produk tidak diketahui";
+
+      if (typeof gtag === "function") {
+        gtag("event", "klik_produk", {
+          nama_produk: namaProduk
+        });
+      }
+    });
+
+  });
+});
+  </script>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ymnoazxxgm");
+      </script>
+
+<!-- SEO Toko Rafa -->
+<title>Toko Rafa Online - Toko Online Produk Pilihan</title>
+
+<meta name="description" content="Toko Rafa Online menyediakan berbagai produk pilihan seperti fashion, kecantikan, elektronik, makanan, rumah, dan promo menarik. Belanja mudah dan praktis.">
+
+<meta name="keywords" content="Toko Rafa, Toko Rafa Online, toko online, belanja online, fashion, kecantikan, elektronik, makanan, rumah, promo">
+
+<meta name="author" content="Toko Rafa">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://azeerafa91-maker.github.io/Tokorafa/">
+
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="XJDL5SfU5lG7J5MuCK3ec89eJ8oNJS1-FU7EaAr841E" />
+
+<!-- Mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Mulai CSS -->
+<style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #f5f5f5;
+      text-align: center;
+    }
+
+    header {
+  background: #f5f5f5;
+  color: #222;
+  padding: 25px;
+    }
+
+    .produk {
+      background: white;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+  button {
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+  nav {
+  background: white;
+  padding: 15px;
+}
+
+nav a {
+  margin: 0 3px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  white-space: nowrap;
+}
+  a {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+  .wa {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f2f2f2;
+}
+
+header {
+  background: #111;
+  color: white;
+  padding: 35px 20px;
+}
+
+header h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+header p {
+  font-size: 16px;
+}
+
+nav {
+  background: white;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  margin: 0 8px;
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+  font-size:14px;
+}
+
+.kartu-produk {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 18px;
+  max-width: 320px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.kartu-produk img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 12px;
+}
+
+.kartu-produk h3 {
+  font-size: 22px;
+}
+
+.kartu-produk b {
+  font-size: 20px;
+}
+
+.kartu-produk a {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.market-menu {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 3px;
+  background: white;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.market-menu button {
+  border: none;
+  padding: 8px 7px;
+  border-radius: 18px;
+  background: #f1f1f1;
+  font-size: 12px;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #222;
+  flex: 1;
+  min-width: 0;
+}
+
+.market-menu button:hover {
+  background: #ddd;
+}
+#produk {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#produk .produk-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+#produk .produk-card img {
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+  html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#produk {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#produk .produk-card {
+  min-width: 0;
+  }
+
+@media (min-width: 768px) {
+  #produk {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 1000px;
+    margin: auto;
+    gap: 12px;
+  }
+}
+
+/* Layar besar */
+@media (min-width: 768px) {
+  #produk {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} 
+   .judul-kategori {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 20px 0 5px;
+     
+} 
+/* GRID PRODUK UNTUK HP */
+#produk {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  padding: 6px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* CARD PRODUK */
+#produk .produk-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+/* GAMBAR */
+#produk .produk-card img {
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+/* LAYAR BESAR = 3 KOLOM */
+@media (min-width: 768px) {
+  #produk {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 1000px;
+    margin: auto;
+    gap: 12px;
+  }
+}
+/* ===== TAMPILAN CERAH TOKO RAFA ===== */
+body {
+  background: #f5f5f5 !important;
+}
+
+/* KATEGORI */
+.kategori {
+  background: transparent;
+}
+/* TOMBOL KATEGORI */
+.kategori button {
+  background: transparent;
+  color: #26352d;
+  }
+
+
+/* TOMBOL SEARCH */
+#tombolCari {
+  background: #ffc107 !important;
+  color: #222 !important;
+  border: none;
+  font-weight: bold;
+}
+  
+/* DESAIN MODERN TOKO RAFA */
+body {
+  background: #f5f7f6;
+  color: #26352d;
+  font-family: Arial, sans-serif;
+}
+
+.produk-card {
+  background: #ffffff;
+  border: 1px solid #e6ece8;
+  border-radius: 14px;
+  padding: 10px;
+  margin-bottom: 14px;
+  box-shadow: 0 3px 12px rgba(30, 70, 45, 0.08);
+  overflow: hidden;
+}
+
+.produk-card img {
+  max-width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.produk-card button,
+.produk-card a {
+  border-radius: 9px;
+}
+  
+/* RAPIIKAN INFORMASI PRODUK */
+.produk-card h3 {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 8px 0 6px;
+  color: #26352d;
+}
+
+.produk-card p {
+  line-height: 1.5;
+}
+
+.produk-card img {
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin: 0 auto;
+  }
+  
+  </style>
+</head>
+
+<body>
+<!-- BANNER TOKO RAFA -->
+<div class="banner-rafa">
+
+  <div class="banner-badge">🔥 PROMO SPESIAL HARI INI 🔥</div>
+
+  <h2>TOKO RAFA</h2>
+
+  <h3>Belanja Hemat, Pilihan Lengkap! 🛒</h3>
+
+  <p>✨ Produk pilihan • Harga menarik • Belanja mudah ✨</p>
+
+  <a href="#produk" class="banner-btn">
+    🛍️ BELANJA SEKARANG
+  </a>
+
+  <div class="banner-menu">
+
+  <div onclick="document.getElementById('promo').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
+    🔥<br><b>PROMO</b>
+  </div>
+
+  <div onclick="document.getElementById('produk').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
+    ⭐<br><b>TERLARIS</b>
+  </div>
+
+  <div onclick="document.getElementById('produk').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
+    🆕<br><b>TERBARU</b>
+  </div>
+
+  <div onclick="document.getElementById('promo').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
+    💰<br><b>HEMAT</b>
+  </div>
+
+</div>
+
+</div>
+
+<style>
+.banner-rafa {
+  margin: 15px 0;
+  padding: 20px 12px;
+  text-align: center;
+  color: white;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #ff3d00, #ff006a, #7b00ff);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.banner-badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 30px;
+  background: white;
+  color: #ff006a;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.banner-rafa h2 {
+  margin: 12px 0 4px;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.banner-rafa h3 {
+  margin: 5px 0 10px;
+  font-size: 22px;
+}
+
+.banner-rafa p {
+  margin: 8px 0 18px;
+  font-size: 14px;
+}
+
+.banner-btn {
+  display: inline-block;
+  padding: 13px 24px;
+  border-radius: 30px;
+  background: white;
+  color: #ff006a;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.banner-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  margin-top: 22px;
+}
+
+.banner-menu div {
+  padding: 8px 3px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.18);
+  font-size: 16px;
+}
+
+.banner-menu b {
+  font-size: 10px;
+}
+
+@media (max-width: 450px) {
+  .banner-rafa h2 {
+    font-size: 32px;
+  }
+
+  .banner-rafa h3 {
+    font-size: 18px;
+  }
+
+  .banner-menu div {
+    padding: 8px 2px;
+  }
+}
+ .produk-card {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+  
+</style>
+  
+
+<style>
+/* ===== SEARCH TOKO RAFA ===== */
+
+.search-box {
+  width: 100%;
+  max-width: 600px;
+  margin: 15px auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 6px;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 2px solid #ff7a00;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-box input:focus {
+  border-color: #ff4500;
+}
+
+.search-box button {
+  padding: 11px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #ff7a00;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search-box button:active {
+  transform: scale(0.97);
+}
+
+#pesanPencarian {
+  text-align: center;
+  font-weight: bold;
+  margin: 10px;
+  display: none;
+  }
+  .kategori {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  background: white;
+  overflow-x: auto;
+}
+
+.kategori button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background: #f1f1f1;
+  white-space: nowrap;
+  font-size: 14px;
+}
+  .kategori {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  background: white;
+  overflow-x: auto;
+  justify-content: center;
+}
+  .kategori {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.kategori button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 20px;
+  background: transparent;
+  color: #26352d;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.kategori button:hover {
+  transform: scale(1.05);
+}
+ 
+.produk-card h3 {
+  margin: 8px 0;
+  font-size: 20px;
+}
+
+.produk-card p {
+  margin: 8px 0;
+}
+.produk-card {
+  display: block;
+  width: 90%;
+  max-width: 320px;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+  }
+  .produk-card button {
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+  nav a {
+  margin: 0 8px;
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#kontak {
+  width: 90%;
+  max-width: 500px;
+  margin: 30px auto !important;
+  text-align: center;
+  box-sizing: border-box;
+}
+  #kontak {
+  grid-column: 1 / -1 !important;
+  width: 90% !important;
+  max-width: 500px !important;
+  margin: 30px auto !important;
+  text-align: center !important;
+  justify-self: center !important;
+}
+  #keranjang {
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  top: auto !important;
+}
+
+.produk-card img {
+  width: 100%;
+  max-width: 250px;
+  height: 250px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 12px;
+  }
+.produk-card[data-kategori="kecantikan"] {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  box-sizing: border-box;
+  }
+  .produk-card[data-kategori="kecantikan"] img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 10%;
+  border-radius: 12px;
+  }
+  .kecantikan-grid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+.kecantikan-grid .produk-card:first-child {
+  grid-column: 1;
+  }
+  .gambar-shopee {
+  display: inline-block;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  text-decoration: none !important;
+}
+
+.gambar-shopee img {
+  display: block;
+  background: transparent !important;
+}
+  .produk-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.produk-card > a:last-child {
+  margin-top: auto;
+}
+
+.produk-card > a:last-child button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 15px;
+  }
+  /* ===== KATEGORI ATAS MENDATAR ===== */
+.kategori-atas {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 10px;
+  padding: 10px 8px;
+  justify-content: flex-start;
+  white-space: nowrap;
+}
+
+.kategori-atas button {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hilangkan scrollbar di HP */
+.kategori-atas::-webkit-scrollbar {
+  display: none;
+}
+
+.kategori-atas {
+  scrollbar-width: none;
+  }
+  /* ===== KATEGORI HORIZONTAL ===== */
+.kategori {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 10px 6px;
+  margin: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+.kategori::-webkit-scrollbar {
+  display: none;
+}
+
+.kategori button {
+  flex: 0 0 auto;
+  padding: 9px 14px;
+  border: none;
+  border-radius: 20px;
+  background: #ff9800;
+  color: white;
+  font-weight: bold;
+  white-space: nowrap;
+  }
+  
+/* BANNER MODERN TOKO RAFA */
+.banner-rafa {
+  background: linear-gradient(135deg, #176b45, #25885b);
+  color: #ffffff;
+  padding: 26px 16px;
+  margin: 12px;
+  border-radius: 18px;
+  box-shadow: 0 5px 16px rgba(23, 107, 69, 0.18);
+  overflow: hidden;
+}
+
+.banner-rafa .banner-badge {
+  display: inline-block;
+  background: #fff0d6;
+  color: #9b5711;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.banner-rafa h2 {
+  color: #ffffff;
+  font-size: 28px;
+  margin: 8px 0;
+  letter-spacing: 1px;
+}
+
+.banner-rafa h3 {
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 1.4;
+  margin: 8px 0;
+}
+
+.banner-rafa p {
+  color: #e8f6ed;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.banner-rafa .banner-btn {
+  display: inline-block;
+  background: #ffad35;
+  color: #26352d;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 10px;
+  margin-top: 8px;
+  }
+  
+
+/* MENU KATEGORI GESER KE SAMPING */
+.kategori {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 10px 12px;
+  margin: 0 0 12px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  touch-action: pan-x;
+}
+
+.kategori::-webkit-scrollbar {
+  display: none;
+}
+
+.kategori button {
+  flex: 0 0 auto;
+  width: auto;
+  white-space: nowrap;
+  }
+  
+  
+</style>
+
+  
+</head>
+
+  <div class="market-menu">
+
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    🏠 Beranda
+  </button>
+
+  <button onclick="document.getElementById('produk').scrollIntoView({behavior:'smooth'})">
+    🛍️ Produk
+  </button>
+
+  <button onclick="document.getElementById('promo').scrollIntoView({behavior:'smooth'});">
+  🔥 Promo
+</button>
+
+  <button onclick="document.getElementById('kontak').scrollIntoView({behavior:'smooth'})">
+    📱 WhatsApp
+  </button>
+
+</div> 
+
+  <!-- ===== SEARCH TOKO RAFA ===== -->
+
+<div class="search-box">
+
+  <input
+    type="text"
+    id="searchinput"
+    placeholder="🔎 Cari produk di Toko Rafa..."
+    autocomplete="off"
+  >
+
+  <button type="button" id="tombolCari">
+    Cari
+  </button>
+
+</div>
+
+<div id="pesanPencarian">
+  Produk tidak ditemukan
+</div>
+  
+
+<header>
+  <h1>TOKO RAFA</h1>
+  <p>Selamat datang di toko kami</p>
+</header>
+
+<style>
+header {
+  background: linear-gradient(135deg, #111827, #374151);
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+  border-radius: 0 0 25px 25px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+header p {
+  margin: 8px 0 0;
+  font-size: 15px;
+}
+</style>
+<div class="kategori">
+<button onclick="location.href='#produk'">🛍️ Semua</button>
+<button onclick="location.href='#fashion'">👕 Fashion</button>
+<button onclick="location.href='#makanan'">🍗 Makanan</button>
+<button onclick="location.href='#kecantikan'">💄 Kecantikan</button>
+<button onclick="location.href='#sepatu'">👟 Sepatu</button>
+<button onclick="location.href='#Tas'">👜 Tas</button>
+<button onclick="location.href='#elektronik'">⚡ Elektronik</button>
+<button onclick="location.href='#aksesoris'">🕶️ Aksesoris</button>
+<button onclick="location.href='#Fashion anak anak'">👕 Fashion Anak</button>
+<button onclick="location.href='#rumah'">🏠 Rumah</button>
+<button onclick="location.href='#obat'">💊 Obat-obatan</button>
+<button onclick="location.href='#tiktokshop'">🎵 TikTok Shop</button>
+</div>
+  
+  <div class="produk" id="produk">
+     
+  <h2 class="judul-kategori">👕 FASHION</h2>
+<div class="produk-card" data kategori="fashion">
+  <a class="gambar-shopee"
+    href="https://s.shopee.co.id/8AWxA0n24W" target="_blank">
+    <img src="crewnek.jpeg.png"
+      alt="kaos pria lengan panjang"></a>
+  <h3>kaos pria krewneck lengan panjang</h3>
+  <div class="ranting">⭐⭐⭐⭐⭐
+    <span>6rb+ terjual</span></div>
+  <div class="harga"> Rp 29.000</div>
+  <a class="tombol-shopee"
+    href="https://s.shopee.co.id/6fi9NYq9fJ" target="_blank">🛍️lihat di shopee</a>
+</div>
+    <div class="produk-card" data kategori="fashion">
+  <a class="gambar-shopee"
+    href="https://s.shopee.co.id/5fpcAgsjFG" target="_blank">
+    <img src="surfing.jpeg.png"
+      alt="paket hemat2"></a>
+  <h3>paket hemat 2 kemeja surfing motiv terbaru</h3>
+  <div class="ranting">⭐⭐⭐⭐⭐
+    <span>491 terjual</span></div>
+  <div class="harga">Rp 32.200</div>
+  <a class="tombol-shopee"
+    href="https://s.shopee.co.id/6AlsmARLPK" target="_blank">🛍️lihat di shopee</a>
+</div>
+    <div class="produk-card" data kategori="fashion">
+  <a class="gambar-shopee"
+    href="https://s.shopee.co.id/1gJTLWqkec" target="_blank">
+<img src="kaoscod.jpeg.png"
+  alt="kaos viral pria"></a>
+  <h3>COD kaos pria viral bahan katun murni</h3>
+  <div class="ranting">⭐⭐⭐⭐⭐
+    <span>500+ terjual</span></div>
+  <div class="harga"> Rp 170.026</div>
+  <a class="tombol-shopee"
+    href="https://s.shopee.co.id/7pu6hJiMaB" target="_blank">🛍️lihat di shopee
+  </a>
+</div>
+    <div class="produk-card" data kategori="fashion">
+      <a class="gambar-shopee"
+        href="https://s.shopee.co.id/qkDtheHey" target="_blank">
+        <img src="viscos.jpeg.png"
+          alt="daster bahan rayon"></a>
+      <h3>setelan laura wanita</h3>
+      <p>bahan rayon viscos baju oneset piyama</p>
+      <div class="ranting"> ⭐⭐⭐⭐⭐
+        <span>119 terjual</span></div>
+      <div class="harga"> Rp 80.000</div>
+      <a class="tombol-shopee"
+        href="https://s.shopee.co.id/30oiU3Cujg" target="_blank">🛍️lihat di shopee</a>
+    </div>
+
