@@ -7523,5 +7523,21 @@ document.addEventListener("click", function(e) {
 
 });
 </script>
+  <!-- KODE LAMA TETAP ADA -->
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("/Rafa-shop/service-worker.js")
+      .then(function () {
+        console.log("Toko Rafa siap digunakan!");
+      })
+      .catch(function (error) {
+        console.log("Service Worker gagal:", error);
+      });
+  });
+}
+</script>
+
 </body>
-</html>
+</html>  
