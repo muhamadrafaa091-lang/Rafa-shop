@@ -1,0 +1,12 @@
+{
+  "name": "Toko Rafa Shop",
+  "short_name": "Toko Rafa",
+  "description": "Toko online produk pilihan",
+  "start_url": "/Rafa-shop/",
+  "scope": "/Rafa-shop/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffc107",
+  "orientation": "portrait",
+  "icons": []
+}
