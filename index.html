@@ -410,14 +410,70 @@ body {
     📲 DOWNLOAD APLIKASI TOKO RAFA
   </a>
 </div>
-  <!-- BANNER TOKO RAFA -->
+  <style>
+.banner-rafa {
+  background:linear-gradient(135deg,#102b63,#087bff,#19b8e8);
+  color:white;
+  text-align:center;
+  padding:25px 15px;
+  border-radius:20px;
+  margin:15px 10px;
+  box-shadow:0 6px 18px #0003;
+}
+.banner-badge {
+  display:inline-block;
+  background:#ffd43b;
+  color:#713b00;
+  padding:9px 16px;
+  border-radius:30px;
+  font-weight:bold;
+}
+.banner-rafa h2 {
+  font-size:32px;
+  margin:18px 0 5px;
+}
+.banner-rafa h3 {
+  font-size:17px;
+  margin:8px 0;
+}
+.banner-rafa p {
+  font-size:13px;
+}
+.banner-btn {
+  display:inline-block;
+  background:#ff8a00;
+  color:white;
+  padding:13px 20px;
+  border:0;
+  border-radius:30px;
+  font-weight:bold;
+  text-decoration:none;
+  cursor:pointer;
+  margin-top:10px;
+}
+.banner-menu {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+  margin-top:22px;
+}
+.banner-menu div {
+  background:#ffffff22;
+  border:1px solid #ffffff55;
+  border-radius:12px;
+  padding:12px 3px;
+  font-size:12px;
+}
+</style>
+
+<!-- BANNER TOKO RAFA -->
 <div class="banner-rafa">
 
   <div class="banner-badge">🔥 PROMO SPESIAL HARI INI 🔥</div>
 
-  <h2>TOKO RAFA</h2>
+  <h2>🛍️ TOKO RAFA</h2>
 
-  <h3>Belanja Hemat, Pilihan Lengkap! 🛒</h3>
+  <h3>Belanja Hemat, Pilihan Lengkap!</h3>
 
   <p>✨ Produk pilihan • Harga menarik • Belanja mudah ✨</p>
 
@@ -425,27 +481,31 @@ body {
     🛍️ BELANJA SEKARANG
   </a>
 
-<button id="installAppBtn" class="banner-btn" style="display:none; margin-top:12px;">
-  📲 INSTAL APLIKASI TOKO RAFA
-</button>
-  
+  <button id="installAppBtn" class="banner-btn"
+    style="display:none;margin-top:12px;">
+    📲 INSTAL APLIKASI TOKO RAFA
+  </button>
+
   <div class="banner-menu">
 
-  <div onclick="document.getElementById('promo').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
-    🔥<br><b>PROMO</b>
-  </div>
+    <div onclick="document.getElementById('promo').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
+      🔥<br><b>PROMO</b>
+    </div>
 
-  <div onclick="document.getElementById('produk').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
-    ⭐<br><b>TERLARIS</b>
-  </div>
+    <div onclick="document.getElementById('produk').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
+      ⭐<br><b>TERLARIS</b>
+    </div>
 
-  <div onclick="document.getElementById('produk').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
-    🆕<br><b>TERBARU</b>
-  </div>
+    <div onclick="document.getElementById('produk').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
+      🆕<br><b>TERBARU</b>
+    </div>
 
-  <div onclick="document.getElementById('promo').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
-    💰<br><b>HEMAT</b>
+    <div onclick="document.getElementById('promo').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
+      💰<br><b>HEMAT</b>
+    </div>
+
   </div>
+</div>
 
 </div>
 
